@@ -1,1 +1,1 @@
-# `~/.confit` files
+# `~/.config` files
