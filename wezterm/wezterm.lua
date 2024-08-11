@@ -1,6 +1,13 @@
 local wezterm = require("wezterm")
+-- local mux = wezterm.mux
 
 local config = wezterm.config_builder()
+
+-- Maximize window on startup
+-- wezterm.on("gui-startup", function(cmd)
+-- 	local tab, pane, window = mux.spawn_window(cmd or {})
+-- 	window:gui_window():maximize()
+-- end)
 
 config.font = wezterm.font("Fira Code")
 config.font_size = 16
@@ -23,42 +30,42 @@ config.colors = {
 
 local act = wezterm.action
 config.leader = {
-	key = "f",
+	key = "s",
 	mods = "CTRL",
 	timeout_milliseconds = math.maxinteger,
 }
 
 config.keys = {
-	-- {
-	-- 	key = "d",
-	-- 	mods = "LEADER",
-	-- 	action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	-- },
-	-- {
-	-- 	key = "D",
-	-- 	mods = "LEADER",
-	-- 	action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
-	-- },
-	-- {
-	-- 	key = "h",
-	-- 	mods = "CTRL",
-	-- 	action = act.ActivatePaneDirection("Left"),
-	-- },
-	-- {
-	-- 	key = "j",
-	-- 	mods = "CTRL",
-	-- 	action = act.ActivatePaneDirection("Down"),
-	-- },
-	-- {
-	-- 	key = "k",
-	-- 	mods = "CTRL",
-	-- 	action = act.ActivatePaneDirection("Up"),
-	-- },
-	-- {
-	-- 	key = "l",
-	-- 	mods = "CTRL",
-	-- 	action = act.ActivatePaneDirection("Right"),
-	-- },
+	{
+		key = "d",
+		mods = "LEADER",
+		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "D",
+		mods = "LEADER",
+		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "h",
+		mods = "LEADER",
+		action = act.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "j",
+		mods = "LEADER",
+		action = act.ActivatePaneDirection("Down"),
+	},
+	{
+		key = "k",
+		mods = "LEADER",
+		action = act.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "l",
+		mods = "LEADER",
+		action = act.ActivatePaneDirection("Right"),
+	},
 }
 
 return config
