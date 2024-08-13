@@ -1,13 +1,6 @@
 local wezterm = require("wezterm")
--- local mux = wezterm.mux
 
 local config = wezterm.config_builder()
-
--- Maximize window on startup
--- wezterm.on("gui-startup", function(cmd)
--- 	local tab, pane, window = mux.spawn_window(cmd or {})
--- 	window:gui_window():maximize()
--- end)
 
 config.font = wezterm.font("Fira Code")
 config.font_size = 16
@@ -25,7 +18,7 @@ config.visual_bell = {
 	fade_out_duration_ms = 150,
 }
 config.colors = {
-	visual_bell = "#202020",
+	visual_bell = "#A020F0",
 }
 
 local act = wezterm.action
@@ -36,6 +29,10 @@ config.leader = {
 }
 
 config.keys = {
+	{	key = "k",
+		mods = "CMD",
+		action = wezterm.action.ClearScrollback("ScrollbackAndViewport")
+	},
 	{
 		key = "d",
 		mods = "LEADER",
@@ -65,6 +62,15 @@ config.keys = {
 		key = "l",
 		mods = "LEADER",
 		action = act.ActivatePaneDirection("Right"),
+	},
+	-- Use arrow keys to jump words
+	{ 	key = "LeftArrow",
+		mods = "OPT",
+		action = wezterm.action({ SendString = "\x1bb" })
+	},
+	{ 	key = "RightArrow",
+		mods = "OPT",
+		action = wezterm.action({ SendString = "\x1bf" })
 	},
 }
 
