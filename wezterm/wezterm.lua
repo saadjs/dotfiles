@@ -11,6 +11,8 @@ config.color_scheme = "Tokyo Night"
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 
+config.audible_bell = "Disabled"
+
 config.visual_bell = {
 	fade_in_function = "EaseIn",
 	fade_in_duration_ms = 150,
@@ -29,10 +31,7 @@ config.leader = {
 }
 
 config.keys = {
-	{	key = "k",
-		mods = "CMD",
-		action = wezterm.action.ClearScrollback("ScrollbackAndViewport")
-	},
+	{ key = "k", mods = "CMD", action = wezterm.action.ClearScrollback("ScrollbackAndViewport") },
 	{
 		key = "d",
 		mods = "LEADER",
@@ -64,14 +63,8 @@ config.keys = {
 		action = act.ActivatePaneDirection("Right"),
 	},
 	-- Use arrow keys to jump words
-	{ 	key = "LeftArrow",
-		mods = "OPT",
-		action = wezterm.action({ SendString = "\x1bb" })
-	},
-	{ 	key = "RightArrow",
-		mods = "OPT",
-		action = wezterm.action({ SendString = "\x1bf" })
-	},
+	{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
+	{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
 }
 
 return config
