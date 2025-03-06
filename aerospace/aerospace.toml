@@ -214,14 +214,6 @@ if.app-id = 'com.apple.Safari'
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
-if.app-id = 'org.mozilla.firefox'
-run = "move-node-to-workspace 1"
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.edgemac'
-run = "move-node-to-workspace 1" 
-
-[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace 1"
 
@@ -230,20 +222,8 @@ if.app-id = 'com.microsoft.VSCode'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
-if.app-id = 'com.todesktop.230313mzl4w4u92'
-run = "move-node-to-workspace 3"
-
-[[on-window-detected]]
 if.app-id = 'com.apple.Notes'
 run = "move-node-to-workspace 5"
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = "move-node-to-workspace 6"
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Music'
