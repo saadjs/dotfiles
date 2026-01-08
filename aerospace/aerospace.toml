@@ -230,3 +230,12 @@ run = "move-node-to-workspace 4"
 [[on-window-detected]]
 if.app-id = 'com.1password.1password'
 run = "move-node-to-workspace 0" 
+
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+run = "move-node-to-workspace 6"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = "move-node-to-workspace 6"
+
