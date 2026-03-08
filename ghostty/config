@@ -1,3 +1,6 @@
+window-save-state = never
+auto-update-channel = tip
+macos-titlebar-style = tabs
 theme = Night Owl
 macos-window-buttons = hidden
 quit-after-last-window-closed = true
@@ -12,4 +15,4 @@ shell-integration-features = no-cursor
 cursor-style-blink = false
 cursor-style = block
 link-url = true
-
+clipboard-paste-protection = false
