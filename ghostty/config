@@ -6,7 +6,7 @@ macos-window-buttons = hidden
 quit-after-last-window-closed = true
 maximize = true
 macos-icon = chalkboard
-font-family = Fira Code
+font-family = Geist Mono
 font-size = 18
 # window-decoration = none
 # window-width = 110
@@ -16,3 +16,12 @@ cursor-style-blink = false
 cursor-style = block
 link-url = true
 clipboard-paste-protection = false
+copy-on-select = clipboard
+window-padding-x = 8
+window-padding-y = 8
+unfocused-split-opacity = 0.9
+
+keybind = page_up=scroll_page_fractional:-0.5
+keybind = page_down=scroll_page_fractional:0.5
+keybind = alt+up=scroll_page_lines:-5
+keybind = alt+down=scroll_page_lines:5
