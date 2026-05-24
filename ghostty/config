@@ -25,3 +25,7 @@ keybind = page_up=scroll_page_fractional:-0.5
 keybind = page_down=scroll_page_fractional:0.5
 keybind = alt+up=scroll_page_lines:-5
 keybind = alt+down=scroll_page_lines:5
+
+# Since pasting in search box doesn't work
+keybind = super+v=paste_from_clipboard
+
