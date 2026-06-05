@@ -10,7 +10,7 @@ config.initial_cols = 85
 config.color_scheme = "Tokyo Night"
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = true
-config.notification_handling = "SuppressFromFocusedPane"
+config.notification_handling = "AlwaysShow"
 
 config.audible_bell = "Disabled"
 
