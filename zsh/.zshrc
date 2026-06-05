@@ -49,3 +49,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 . "/Users/saad/.deno/env"
+
+alias tm='tmux new -A -s main'
