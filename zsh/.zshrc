@@ -1,10 +1,10 @@
-export FPATH="/Users/saad/.zsh/completions:$FPATH"
+export FPATH="$HOME/.zsh/completions:$FPATH"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="sonicradish"
 plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
 
 FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
-fpath=(/Users/saad/.docker/completions $fpath)
+fpath=($HOME/.docker/completions $fpath)
 
 # Cache compinit: run full audit at most once/day, otherwise -C. Shadow
 # compinit during oh-my-zsh source so its internal call is a no-op.
@@ -27,7 +27,7 @@ export PATH="$PATH:$HOME/go/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PNPM_HOME="/Users/saad/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -48,6 +48,6 @@ bindkey '^[[B' history-search-forward
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-. "/Users/saad/.deno/env"
+. "$HOME/.deno/env"
 
 alias tm='tmux new -A -s main'
