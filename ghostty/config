@@ -1,6 +1,6 @@
 window-save-state = never
-auto-update-channel = stable
-macos-titlebar-style = transparent
+auto-update-channel = tip
+macos-titlebar-style = tabs
 theme = Night Owl
 macos-window-buttons = hidden
 quit-after-last-window-closed = true
@@ -8,45 +8,22 @@ maximize = true
 macos-icon = chalkboard
 font-family = Geist Mono
 font-size = 18
-# window-decoration = none
-# window-width = 110
-# window-height = 45 
+#window-decoration = none
 shell-integration-features = no-cursor
 cursor-style-blink = false
 cursor-style = block
 link-url = true
 clipboard-paste-protection = false
-# copy-on-select = clipboard
+copy-on-select = clipboard
 window-padding-x = 8
 window-padding-y = 8
 unfocused-split-opacity = 0.9
+macos-option-as-alt = true
 
-keybind = page_up=scroll_page_fractional:-0.5
-keybind = page_down=scroll_page_fractional:0.5
-keybind = alt+up=scroll_page_lines:-5
-keybind = alt+down=scroll_page_lines:5
+keybind = super+u=esc:[5~
+keybind = super+j=esc:[6~
+keybind = super+shift+u=esc:[1;5H
+keybind = super+shift+j=esc:[1;5F
 
 # Since pasting in search box doesn't work
 keybind = super+v=paste_from_clipboard
-
-# Use tmux windows instead of native macOS tabs
-keybind = super+t=esc:t
-keybind = super+w=esc:w
-keybind = super+1=esc:1
-keybind = super+digit_1=esc:1
-keybind = super+2=esc:2
-keybind = super+digit_2=esc:2
-keybind = super+3=esc:3
-keybind = super+digit_3=esc:3
-keybind = super+4=esc:4
-keybind = super+digit_4=esc:4
-keybind = super+5=esc:5
-keybind = super+digit_5=esc:5
-keybind = super+6=esc:6
-keybind = super+digit_6=esc:6
-keybind = super+7=esc:7
-keybind = super+digit_7=esc:7
-keybind = super+8=esc:8
-keybind = super+digit_8=esc:8
-keybind = super+9=esc:9
-keybind = super+digit_9=esc:9
